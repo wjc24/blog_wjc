@@ -1,0 +1,27 @@
+{extend name="common/public" /}
+{block name="contain"}
+<div class="col-xs-9 banner-body-right">
+	<div class="gallery-head">
+		<h5>Blog</h5>
+		<p>Here are my selected articles to share with you.</p>
+	</div>
+	<div class="blog">
+		{volist name="data" id="data"}
+		<div class="blog-grid">
+			<div class="col-xs-4 blog-grid-left">
+				<a href="/index/article/detail/?id={$data->id}"><img src="{$data->pic}" alt=" " class="img-responsive"></a>
+			</div>
+			<div class="col-xs-8 blog-grid-right">
+				<h4><a href="single.html">{$data->title}</a></h4>
+				<p>		{$data->content |substr=0,300}...</p>
+
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		{/volist}
+		<div id="pager" class="col-xs-6 col-md-offset-4">
+			<div class="PagerView">{$page}</div>
+		</div>
+	</div>
+</div>
+{/block}

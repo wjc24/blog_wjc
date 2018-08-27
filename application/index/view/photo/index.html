@@ -1,0 +1,47 @@
+
+{extend name="common/public" /}
+
+{block name="contain"}
+<div class="col-xs-9 banner-body-right" style="margin: 0 auto;">
+	<div class="gallery-head">
+		<h5>Photo Gallery</h5>
+		<p>But I must explain to you how all this mistaken idea of denouncing  pleasure and praising pain was born.</p>
+	</div>
+
+	<div class="gallery-grids" style=" -moz-column-count:1; /* Firefox */
+            -webkit-column-count:1; /* Safari 和 Chrome */
+            column-count:1;
+            -moz-column-gap: 1em;
+            -webkit-column-gap: 1em;
+            column-gap: 1em;">
+		{volist name="data" id="data"}
+		<div class="gallery-grid" style="padding: 1em;
+            margin: 0 0 1em 0;
+            -moz-page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            break-inside: avoid;
+            ">
+			<!--<a href="/assets/img/4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox " >-->
+				<!--<img src="{$data->pic}" alt=" "  style=" width: 100%;margin-bottom:10px; ">-->
+			<img src="https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=03948ea9b4315c60579863bdecd8a076/8326cffc1e178a825a6b5d1cfe03738da977e833.jpg" style="width: 100%;margin-bottom:10px; ">
+			<img src="https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=3d645bf2d0ca7bcb6976cf7ddf600006/6d81800a19d8bc3efe5f64fb858ba61ea8d345af.jpg"  style="width: 100%;margin-bottom:10px; ">
+			<img src="https://imgsa.baidu.com/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=9fe1d71697ef76c6c4dff379fc7f969f/b03533fa828ba61ed2efcd184634970a304e5987.jpg" style="width: 100%;margin-bottom:10px;">
+			<!--</a>-->
+		</div>
+		{/volist}
+
+	</div>
+
+	<!--script-->
+	<script src="/assets/js/jquery.chocolat.js"></script>
+	<link rel="stylesheet" href="/assets/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+	<!--light-box-files-->
+	<script type="text/javascript" charset="utf-8">
+        $(function() {
+            $('.gallery-grid a').Chocolat();
+        });
+	</script>
+	<!--script-->
+
+</div>
+{/block}
